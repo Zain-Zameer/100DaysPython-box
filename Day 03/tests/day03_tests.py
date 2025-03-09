@@ -6,7 +6,7 @@ points = 0
 
 def run_user_code():
     try:
-        result = subprocess.run(["python", "../day03_tasks.py"], capture_output=True, text=True)
+        result = subprocess.run(["python", "./day03_tasks.py"], capture_output=True, text=True)
         return result.stdout.strip().split("\n") 
     except Exception as e:
         print("⚠️ Error running main.py:", e)
@@ -33,9 +33,9 @@ test_task1(output)
 test_task2(output)
 
 if(points==2):
-    with open("../progress.json") as f:
+    with open("./progress.json") as f:
         d = json.load(f)
     d["Day 03"] = "Completed"
     d["Points Taken"] = points
-    with open("../progress.json","w") as f:
+    with open("./progress.json","w") as f:
         json.dump(d,f,indent=4)
