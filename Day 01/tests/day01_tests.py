@@ -36,6 +36,9 @@ def test_reason(output):
         print("- Passed Task 3")
 
 output = run_user_code()
+if(output[0]==''):
+    print("Tasks are not completed.")
+    exit()
 test_college_name(output)
 test_age(output)
 test_reason(output)

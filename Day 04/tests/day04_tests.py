@@ -47,6 +47,9 @@ def test_task4(output):
         print("Enter a valid lucky number like 14 or 10")
 output = run_user_code()
 # print(output)
+if(output[0]==''):
+    print("Tasks are not completed.")
+    exit()
 test_task1(output)
 test_task2(output)
 test_task3(output)

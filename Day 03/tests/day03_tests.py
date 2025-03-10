@@ -28,7 +28,9 @@ def test_task2(output):
         print("Check again what you have written, it's pattern should be equal to 'pip install pyxl'")
 
 output = run_user_code()
-print(output)
+if(output[0]==''):
+    print("Tasks are not completed.")
+    exit()
 test_task1(output)
 test_task2(output)
 
